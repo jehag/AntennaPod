@@ -34,7 +34,6 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.specialeffects.DiscoveryDefaultUpdateParticle;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -86,7 +85,6 @@ public class MainActivity extends CastEnabledActivity {
     public static final String EXTRA_REFRESH_ON_START = "refresh_on_start";
     public static final String EXTRA_STARTED_FROM_SEARCH = "started_from_search";
     public static final String KEY_GENERATED_VIEW_ID = "generated_view_id";
-    public static String PARTICLE_STRING = "";
 
     private @Nullable DrawerLayout drawerLayout;
     private @Nullable ActionBarDrawerToggle drawerToggle;
@@ -107,9 +105,6 @@ public class MainActivity extends CastEnabledActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         lastTheme = UserPreferences.getNoTitleTheme();
-        DiscoveryDefaultUpdateParticle particleHandler = new DiscoveryDefaultUpdateParticle();
-        PARTICLE_STRING = particleHandler.createParticle();
-        System.out.println(PARTICLE_STRING);
         setTheme(lastTheme);
         if (savedInstanceState != null) {
             ensureGeneratedViewIdGreaterThan(savedInstanceState.getInt(KEY_GENERATED_VIEW_ID, 0));
