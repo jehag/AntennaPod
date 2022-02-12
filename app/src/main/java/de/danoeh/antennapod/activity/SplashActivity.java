@@ -28,13 +28,8 @@ public class SplashActivity extends AppCompatActivity {
         setContentView(R.layout.splash);
 
         ProgressBar progressBar = findViewById(R.id.progressBar);
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
-            Drawable wrapDrawable = DrawableCompat.wrap(progressBar.getIndeterminateDrawable());
-            DrawableCompat.setTint(wrapDrawable, 0xffffffff);
-            progressBar.setIndeterminateDrawable(DrawableCompat.unwrap(wrapDrawable));
-        } else {
-            progressBar.getIndeterminateDrawable().setColorFilter(0xffffffff, PorterDuff.Mode.SRC_IN);
-        }
+        progressBar.getIndeterminateDrawable().setColorFilter(0xffffffff, PorterDuff.Mode.SRC_IN);
+
 
         Completable.create(subscriber -> {
             // Trigger schema updates

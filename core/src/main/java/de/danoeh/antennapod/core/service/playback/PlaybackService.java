@@ -1278,8 +1278,7 @@ public class PlaybackService extends MediaBrowserServiceCompat {
         // showRewindOnCompactNotification() corresponds to the "Set Lockscreen Buttons"
         // Settings in UI.
         // Hence, from user perspective, he/she is setting the buttons for Lockscreen
-        return (UserPreferences.showRewindOnCompactNotification() &&
-                (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP));
+        return false;
     }
 
     private void updateNotificationAndMediaSession(final Playable p) {

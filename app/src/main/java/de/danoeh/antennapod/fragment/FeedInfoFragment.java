@@ -306,7 +306,7 @@ public class FeedInfoFragment extends Fragment implements Toolbar.OnMenuItemClic
     }
 
     private void reconnectLocalFolder(Uri uri) {
-        if (Build.VERSION.SDK_INT < 21 || feed == null) {
+        if (feed == null) {
             return;
         }
 
