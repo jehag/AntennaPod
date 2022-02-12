@@ -1,14 +1,8 @@
 package de.danoeh.antennapod.net.ssl;
 
-import android.os.Build;
-import okhttp3.CipherSuite;
-import okhttp3.ConnectionSpec;
 import okhttp3.OkHttpClient;
 
 import javax.net.ssl.X509TrustManager;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class SslClientSetup {
     public static void installCertificates(OkHttpClient.Builder builder) {
