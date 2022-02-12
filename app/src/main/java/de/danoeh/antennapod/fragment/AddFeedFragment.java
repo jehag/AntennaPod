@@ -107,9 +107,6 @@ public class AddFeedFragment extends Fragment {
         });
 
         viewBinding.addLocalFolderButton.setOnClickListener(v -> {
-            if (Build.VERSION.SDK_INT < 21) {
-                return;
-            }
             try {
                 addLocalFolderLauncher.launch(null);
             } catch (ActivityNotFoundException e) {
@@ -118,9 +115,6 @@ public class AddFeedFragment extends Fragment {
                         .showSnackbarAbovePlayer(R.string.unable_to_start_system_file_manager, Snackbar.LENGTH_LONG);
             }
         });
-        if (Build.VERSION.SDK_INT < 21) {
-            viewBinding.addLocalFolderButton.setVisibility(View.GONE);
-        }
 
         viewBinding.searchButton.setOnClickListener(view -> performSearch());
 
@@ -208,9 +202,6 @@ public class AddFeedFragment extends Fragment {
     }
 
     private Feed addLocalFolder(Uri uri) {
-        if (Build.VERSION.SDK_INT < 21) {
-            return null;
-        }
         getActivity().getContentResolver()
                 .takePersistableUriPermission(uri, Intent.FLAG_GRANT_READ_URI_PERMISSION);
         DocumentFile documentFile = DocumentFile.fromTreeUri(getContext(), uri);

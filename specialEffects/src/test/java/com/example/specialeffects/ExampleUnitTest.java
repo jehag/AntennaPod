@@ -13,6 +13,7 @@ public class ExampleUnitTest {
     @Test
     public void particle_isCreated() {
         DiscoveryDefaultUpdateParticle particleHandler = new DiscoveryDefaultUpdateParticle();
+        System.out.println("minhtriwashere");
         assertEquals("particle01", particleHandler.createParticle());
     }
 }
