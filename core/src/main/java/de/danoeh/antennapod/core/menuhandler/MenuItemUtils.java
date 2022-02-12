@@ -2,7 +2,6 @@ package de.danoeh.antennapod.core.menuhandler;
 
 import android.view.Menu;
 import android.view.MenuItem;
-import com.example.specialeffects.DiscoveryDefaultUpdateParticle;
 
 import de.danoeh.antennapod.core.R;
 
@@ -22,9 +21,6 @@ public class MenuItemUtils {
      * @return The returned value of the UpdateRefreshMenuItemChecker's isRefreshing() method.
      */
     public static boolean updateRefreshMenuItem(Menu menu, int resId, UpdateRefreshMenuItemChecker checker) {
-        DiscoveryDefaultUpdateParticle particleHandler = new DiscoveryDefaultUpdateParticle();
-        System.out.println(particleHandler.createParticle());
-
         // expand actionview if feeds are being downloaded, collapse otherwise
         MenuItem refreshItem = menu.findItem(resId);
         if (checker.isRefreshing()) {

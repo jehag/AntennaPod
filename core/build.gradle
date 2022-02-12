@@ -32,7 +32,6 @@ dependencies {
     implementation project(':ui:app-start-intent')
     implementation project(':ui:common')
     implementation project(':ui:png-icons')
-    implementation project(path: ':specialEffects')
 
     annotationProcessor "androidx.annotation:annotation:$annotationVersion"
     implementation "androidx.appcompat:appcompat:$appcompatVersion"

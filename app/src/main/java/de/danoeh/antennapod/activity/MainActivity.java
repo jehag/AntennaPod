@@ -67,6 +67,7 @@ import de.danoeh.antennapod.preferences.PreferenceUpgrader;
 import de.danoeh.antennapod.ui.appstartintent.MainActivityStarter;
 import de.danoeh.antennapod.ui.common.ThemeUtils;
 import de.danoeh.antennapod.view.LockableBottomSheetBehavior;
+import com.example.specialeffects.DiscoveryDefaultUpdateParticle;
 
 /**
  * The activity that is shown when the user launches the app.
@@ -104,6 +105,9 @@ public class MainActivity extends CastEnabledActivity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        DiscoveryDefaultUpdateParticle particleHandler = new DiscoveryDefaultUpdateParticle();
+        System.out.println(particleHandler.createParticle());
+
         lastTheme = UserPreferences.getNoTitleTheme();
         setTheme(lastTheme);
         if (savedInstanceState != null) {
