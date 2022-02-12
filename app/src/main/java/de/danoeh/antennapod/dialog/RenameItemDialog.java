@@ -42,6 +42,7 @@ public class RenameItemDialog {
         String title = feed != null ? feed.getTitle() : drawerItem.getTitle();
 
         alertViewBinding.urlEditText.setText(title);
+        // Check if the name is null
         AlertDialog dialog = new AlertDialog.Builder(activity)
                 .setView(content)
                 .setTitle(feed != null ? R.string.rename_feed_label : R.string.rename_tag_label)
