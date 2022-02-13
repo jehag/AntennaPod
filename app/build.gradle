@@ -121,7 +121,7 @@ dependencies {
     implementation project(':playback:cast')
     implementation project(':ui:app-start-intent')
     implementation project(':ui:common')
-    implementation project(path: ':specialEffects')
+    implementation project(':specialEffects')
 
     annotationProcessor "androidx.annotation:annotation:$annotationVersion"
     implementation "androidx.appcompat:appcompat:$appcompatVersion"
